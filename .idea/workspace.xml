@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1083844-dee6-4019-a8da-75ea8cf9d050" name="Default" comment="Approximate time taken: 145m&#10;* Made the Panel class&#10;* Made the renderer&#10;* Made a temporary testing skin/font&#10;* Made a temporary testing panel">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Graphics/atlas.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Graphics/font.png" />
+    <list default="true" id="e1083844-dee6-4019-a8da-75ea8cf9d050" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/TopLevelPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Graphics/font.fnt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Graphics/tempSkin.atlas" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Graphics/tempSkin.json" />
-      <change type="DELETED" beforePath="H:\Idea\Computer-Science-Kiosk\src\Kiosk.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/tempPanel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/tempTopLevelPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Artifacts/Kiosk.jar" afterPath="$PROJECT_DIR$/Artifacts/Kiosk.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/Kiosk.java" afterPath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/Kiosk.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java" afterPath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Kiosk.iws" />
@@ -67,6 +64,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -76,13 +74,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Kiosk.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Kiosk.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/Kiosk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="17" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0" vertical-offset="472" max-vertical-offset="1649">
+            <state line="92" column="20" selection-start="3080" selection-end="3080" vertical-scroll-proportion="0.9330544" vertical-offset="1084" max-vertical-offset="2346">
               <folding>
-                <element signature="e#1495#1496#0" expanded="true" />
-                <element signature="e#1523#1524#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1464#1465#0" expanded="true" />
+                <element signature="e#1492#1493#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tempTopLevelPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/tempTopLevelPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="56" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#662#851#0" expanded="true" />
+                <element signature="e#840#841#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,12 +103,17 @@
       <file leaf-file-name="Panel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="10" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="1751">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2227#2372#0" expanded="true" />
-                <element signature="e#2361#2362#0" expanded="true" />
-              </folding>
+            <state line="25" column="9" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="1462">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tempPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/tempPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,7 +121,7 @@
       <file leaf-file-name="ClickListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/libgdx/sources/gdx-sources.jar!/com/badlogic/gdx/scenes/scene2d/utils/ClickListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="4" selection-start="4174" selection-end="4235" vertical-scroll-proportion="0.0" vertical-offset="1291" max-vertical-offset="2703">
+            <state line="110" column="75" selection-start="4173" selection-end="4233" vertical-scroll-proportion="0.0" vertical-offset="1291" max-vertical-offset="2703">
               <folding>
                 <element signature="n#!!doc" expanded="false" />
                 <element signature="imports" expanded="false" />
@@ -133,10 +150,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopLevelPanel.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TopLevelPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/TopLevelPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="31" selection-start="341" selection-end="341" vertical-scroll-proportion="0.55581945" vertical-offset="55" max-vertical-offset="476">
+            <state line="13" column="4" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -154,7 +171,7 @@
       <file leaf-file-name="tempSkin.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graphics/tempSkin.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="48" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+            <state line="14" column="48" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="374">
               <folding />
             </state>
           </provider>
@@ -187,7 +204,11 @@
         <option value="$PROJECT_DIR$/src/Graphics/blueSheet.xml" />
         <option value="$PROJECT_DIR$/src/Graphics/tempSkin.json" />
         <option value="$PROJECT_DIR$/src/Graphics/tempSkin.atlas" />
+        <option value="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/tempPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/tempTopLevelPanel.java" />
         <option value="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/Kiosk.java" />
+        <option value="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/tempPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/tempTopLevelPanel.java" />
         <option value="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java" />
         <option value="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/TopLevelPanel.java" />
       </list>
@@ -273,24 +294,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Graphics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Kiosk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Computer-Science-Kiosk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="kiosk" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -342,13 +345,16 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistory" value="Kiosk." />
-    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="SearchEverywhereHistory" value="&#10;Kiosk." />
+    <property name="LayoutCode.rearrangeEntriesJava" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\Idea\Computer-Science-Kiosk\src\Graphics" />
       <recent name="G:\Documents\IntelliJ\Kiosk" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.thepaperpilot.kiosk" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Idea\Computer-Science-Kiosk\src\Graphics" />
@@ -552,7 +558,11 @@
       <created>1398093112224</created>
       <updated>1398093112224</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Approximate time taken: 145m&#10;* Made the Panel class&#10;* Made the renderer&#10;* Made a temporary testing skin/font&#10;* Made a temporary testing panel">
+      <created>1400684296475</created>
+      <updated>1400684296475</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -577,8 +587,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24930556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39919356" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32258064" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39919356" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32258064" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -602,7 +612,9 @@
     <MESSAGE value="Design Document now supports formatting" />
     <MESSAGE value="Changed project settings&#10;Integrated VCS&#10;Defined SDK" />
     <MESSAGE value="Added class structure&#10;Also, added the Panel interface. Is currently empty (that would be overstepping my bounds)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added class structure&#10;Also, added the Panel interface. Is currently empty (that would be overstepping my bounds)" />
+    <MESSAGE value="Approximate time taken: 145m&#10;* Made the Panel class&#10;* Made the renderer&#10;* Made a temporary testing skin/font&#10;* Made a temporary testing panel" />
+    <MESSAGE value="Approximate time taken: 60m&#10;* Added Top Level Panels&#10;* Added placeholder panels of both types&#10;* Made the kiosk sort top level panels based on priority&#10;Note: We may later use collections to automatically detect all top level panels, but for now just manually add them to the arraylist in kiosk's create() function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Approximate time taken: 60m&#10;* Added Top Level Panels&#10;* Added placeholder panels of both types&#10;* Made the kiosk sort top level panels based on priority&#10;Note: We may later use collections to automatically detect all top level panels, but for now just manually add them to the arraylist in kiosk's create() function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -612,41 +624,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="45" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.0" vertical-offset="542" max-vertical-offset="1530">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2227#2372#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/TopLevelPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/Kiosk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="61" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1394">
-          <folding>
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphics/tempSkin.atlas">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="27" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="3621">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libgdx/sources/gdx-sources.jar!/com/badlogic/gdx/scenes/scene2d/ui/Skin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="11" selection-start="3275" selection-end="3275" vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="8857">
@@ -662,11 +639,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1513">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2227#2372#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -681,8 +654,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="38" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1275">
           <folding>
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -702,11 +676,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" vertical-offset="335" max-vertical-offset="1513">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2227#2372#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -721,8 +691,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="833">
           <folding>
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -730,11 +701,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="23" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="170">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2227#2372#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -752,8 +719,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="833">
           <folding>
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -761,11 +729,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="23" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="170">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2227#2372#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -783,8 +747,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="867">
           <folding>
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -792,10 +757,17 @@
     <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="23" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/Kiosk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2227#2372#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -804,8 +776,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
           <folding>
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -814,18 +787,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
           <folding>
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/Kiosk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
-          <folding>
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -834,8 +798,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="13" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="833">
           <folding>
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -877,11 +842,7 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/libgdx/sources/gdx-sources.jar!/com/badlogic/gdx/Screen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="4" selection-start="1680" selection-end="1699" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="46" column="4" selection-start="1680" selection-end="1699" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/libgdx/sources/gdx-sources.jar!/com/badlogic/gdx/utils/viewport/ScreenViewport.java">
@@ -908,9 +869,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphics/font.fnt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1802">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1802" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/libgdx/sources/gdx-sources.jar!/com/badlogic/gdx/Game.java">
@@ -956,9 +915,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/libgdx/sources/gdx-sources.jar!/com/badlogic/gdx/scenes/scene2d/ui/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="242" column="16" selection-start="9218" selection-end="9218" vertical-scroll-proportion="0.33286908" vertical-offset="3110" max-vertical-offset="8092">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libgdx/sources/gdx-sources.jar!/com/badlogic/gdx/InputProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="17" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.33263597" vertical-offset="45" max-vertical-offset="1139" />
+      </provider>
+    </entry>
     <entry file="jar://$PROJECT_DIR$/libgdx/sources/gdx-sources.jar!/com/badlogic/gdx/scenes/scene2d/utils/ClickListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="4" selection-start="4174" selection-end="4235" vertical-scroll-proportion="0.0" vertical-offset="1291" max-vertical-offset="2703">
+        <state line="110" column="75" selection-start="4173" selection-end="4233" vertical-scroll-proportion="0.0" vertical-offset="1291" max-vertical-offset="2703">
           <folding>
             <element signature="n#!!doc" expanded="false" />
             <element signature="imports" expanded="false" />
@@ -986,31 +957,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/Kiosk.java">
+    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/tempPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="17" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0" vertical-offset="472" max-vertical-offset="1649">
-          <folding>
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
-          </folding>
+        <state line="2" column="0" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="10" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="1751">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2227#2372#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-          </folding>
+        <state line="25" column="9" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="1462">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/TopLevelPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="31" selection-start="341" selection-end="341" vertical-scroll-proportion="0.55581945" vertical-offset="55" max-vertical-offset="476">
+        <state line="13" column="4" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="799">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/tempTopLevelPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="56" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#662#851#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/Kiosk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="20" selection-start="3080" selection-end="3080" vertical-scroll-proportion="0.9330544" vertical-offset="1084" max-vertical-offset="2346">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

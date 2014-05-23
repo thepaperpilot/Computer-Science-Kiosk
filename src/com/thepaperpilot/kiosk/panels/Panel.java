@@ -15,8 +15,7 @@ import com.thepaperpilot.kiosk.Kiosk;
 public abstract class Panel implements Screen {
 
     Label title;
-    Table body;
-    Stage stage;
+    public Stage stage;
 
     public Panel() {
         initialize();
@@ -24,7 +23,7 @@ public abstract class Panel implements Screen {
 
     public abstract void initialize();
 
-    public void initialize(String title, String bodyText) {
+    void initialize(String title, String bodyText) {
         Table body = new Table(Kiosk.skin);
         Label temp = new Label(bodyText, Kiosk.skin);
         temp.setAlignment(Align.left);
@@ -35,13 +34,11 @@ public abstract class Panel implements Screen {
     public void initialize(String title, Image bodyImage, String bodyText) {
         Table body = new Table(Kiosk.skin);
         body.add(bodyImage).width(Kiosk.WIDTH * .3f).fillY();
-        body.add(new Label(bodyText, Kiosk.skin)).fill();
+        body.add(bodyText).fill();
         initialize(title, body);
     }
 
     public void initialize(String titleText, Table body) {
-        this.body = body;
-
         title = new Label(titleText, Kiosk.skin, "large");
         title.setAlignment(Align.center);
 
@@ -63,8 +60,8 @@ public abstract class Panel implements Screen {
         });
 
         stage = new Stage(new ScreenViewport());
-        stage.addActor(panel);
-        stage.addActor(back);
+        stage.addActor(panel);        // Position 0 (index)
+        stage.addActor(back);         // Position 1 (index)
     }
 
     public void render(float delta) {

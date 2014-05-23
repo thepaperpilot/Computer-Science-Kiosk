@@ -7,9 +7,13 @@ import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.thepaperpilot.kiosk.panels.Panel;
+import com.thepaperpilot.kiosk.panels.TopLevelPanel;
+import com.thepaperpilot.kiosk.panels.tempTopLevelPanel;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Kiosk implements ApplicationListener {
 
@@ -19,9 +23,10 @@ public class Kiosk implements ApplicationListener {
 
     public final static int PADDING = 10;
 
+    private static final int COL_SIZE = 3;
+    private final static ArrayList<Panel> panelHistory = new ArrayList<>();
     public static Skin skin;
     private static Panel panel;
-    private static ArrayList<Panel> panelHistory;
 
     public static void main(String[] args) {
         LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
@@ -34,6 +39,10 @@ public class Kiosk implements ApplicationListener {
         new LwjglApplication(new Kiosk(), cfg);
     }
 
+    private static Panel getPanel() {
+        return panel;
+    }
+
     private static void setPanel(Panel panel) {
         if (Kiosk.panel != null) Kiosk.panel.hide();
         Kiosk.panel = panel;
@@ -43,8 +52,16 @@ public class Kiosk implements ApplicationListener {
         }
     }
 
-    public Panel getPanel() {
-        return panel;
+    public static void changePanel(Panel toPanel) {
+        panelHistory.add(getPanel());
+        // TODO Fade transition
+        setPanel(toPanel);
+        Gdx.input.setInputProcessor(toPanel.stage);
+    }
+
+    public static void back() {
+        if (!panelHistory.isEmpty()) setPanel(panelHistory.remove(panelHistory.size() - 1));
+        Gdx.input.setInputProcessor(getPanel().stage);
     }
 
     @Override
@@ -56,14 +73,37 @@ public class Kiosk implements ApplicationListener {
         skin = manager.get("Graphics/tempSkin.json");
         skin.getFont("font").setScale(.5f);
 
-        // Temporary test panel to make sure everything works
-        Panel test = new Panel() {
+        Panel main = new Panel() {
             @Override
             public void initialize() {
-                initialize("This is a test", "Can you read me?");
+                Table body = new Table();
+
+                // TODO add top level panels here
+                ArrayList<TopLevelPanel> panels = new ArrayList<>();
+                panels.add(new tempTopLevelPanel());
+
+                Collections.sort(panels);
+
+                initialize("", body);
+                stage.getActors().removeIndex(1);
+
+                Table panelTable = new Table(Kiosk.skin);
+                panelTable.top();
+
+                int currcol = 0;
+                for (final TopLevelPanel panel : panels) {
+                    panelTable.add(panel.button);
+                    currcol++;
+                    if (currcol > COL_SIZE) panelTable.row();
+                }
+
+                stage.addActor(panelTable);
             }
         };
-        setPanel(test);
+        setPanel(main);
+        panelHistory.add(main);
+
+        Gdx.input.setInputProcessor(getPanel().stage);
     }
 
     @Override
@@ -91,15 +131,5 @@ public class Kiosk implements ApplicationListener {
     public void dispose() {
         if (panel != null) panel.dispose();
         if (skin != null) skin.dispose();
-    }
-
-    public void changePanels(Panel toPanel) {
-        panelHistory.add(getPanel());
-        // TODO Fade transition
-        setPanel(toPanel);
-    }
-
-    public static void back() {
-        if (!panelHistory.isEmpty()) setPanel(panelHistory.remove(panelHistory.size() - 1));
     }
 }
