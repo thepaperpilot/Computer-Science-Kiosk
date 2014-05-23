@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1083844-dee6-4019-a8da-75ea8cf9d050" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/TopLevelPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/tempPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/tempTopLevelPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Artifacts/Kiosk.jar" afterPath="$PROJECT_DIR$/Artifacts/Kiosk.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/Kiosk.java" afterPath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/Kiosk.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java" afterPath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/TopLevelPanel.java" afterPath="$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/TopLevelPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Kiosk.iws" />
@@ -74,10 +69,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Kiosk.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Kiosk.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/Kiosk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="20" selection-start="3080" selection-end="3080" vertical-scroll-proportion="0.9330544" vertical-offset="1084" max-vertical-offset="2346">
+            <state line="110" column="36" selection-start="3599" selection-end="3600" vertical-scroll-proportion="-5.769231" vertical-offset="1669" max-vertical-offset="2346">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1464#1465#0" expanded="true" />
@@ -103,7 +98,7 @@
       <file leaf-file-name="Panel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="9" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="1462">
+            <state line="25" column="9" selection-start="767" selection-end="767" vertical-scroll-proportion="-4.3846154" vertical-offset="141" max-vertical-offset="1462">
               <folding />
             </state>
           </provider>
@@ -150,11 +145,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopLevelPanel.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TopLevelPanel.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/TopLevelPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="4" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="799">
-              <folding />
+            <state line="27" column="69" selection-start="915" selection-end="915" vertical-scroll-proportion="0.33263597" vertical-offset="232" max-vertical-offset="816">
+              <folding>
+                <element signature="e#974#975#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -562,7 +559,11 @@
       <created>1400684296475</created>
       <updated>1400684296475</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Approximate time taken: 60m&#10;* Added Top Level Panels&#10;* Added placeholder panels of both types&#10;* Made the kiosk sort top level panels based on priority&#10;Note: We may later use collections to automatically detect all top level panels, but for now just manually add them to the arraylist in kiosk's create() function">
+      <created>1400855965305</created>
+      <updated>1400855965305</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -614,7 +615,8 @@
     <MESSAGE value="Added class structure&#10;Also, added the Panel interface. Is currently empty (that would be overstepping my bounds)" />
     <MESSAGE value="Approximate time taken: 145m&#10;* Made the Panel class&#10;* Made the renderer&#10;* Made a temporary testing skin/font&#10;* Made a temporary testing panel" />
     <MESSAGE value="Approximate time taken: 60m&#10;* Added Top Level Panels&#10;* Added placeholder panels of both types&#10;* Made the kiosk sort top level panels based on priority&#10;Note: We may later use collections to automatically detect all top level panels, but for now just manually add them to the arraylist in kiosk's create() function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Approximate time taken: 60m&#10;* Added Top Level Panels&#10;* Added placeholder panels of both types&#10;* Made the kiosk sort top level panels based on priority&#10;Note: We may later use collections to automatically detect all top level panels, but for now just manually add them to the arraylist in kiosk's create() function" />
+    <MESSAGE value="Removed a debugging line" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed a debugging line" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -646,7 +648,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/TopLevelPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="442">
-          <folding />
+          <folding>
+            <element signature="e#974#975#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -683,7 +687,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/TopLevelPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="442">
-          <folding />
+          <folding>
+            <element signature="e#974#975#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -957,27 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/tempPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="9" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="1462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/TopLevelPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="4" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/tempTopLevelPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="56" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
@@ -991,11 +976,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/Kiosk.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="20" selection-start="3080" selection-end="3080" vertical-scroll-proportion="0.9330544" vertical-offset="1084" max-vertical-offset="2346">
+        <state line="110" column="36" selection-start="3599" selection-end="3600" vertical-scroll-proportion="-5.769231" vertical-offset="1669" max-vertical-offset="2346">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1464#1465#0" expanded="true" />
             <element signature="e#1492#1493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/Panel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="9" selection-start="767" selection-end="767" vertical-scroll-proportion="-4.3846154" vertical-offset="141" max-vertical-offset="1462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/tempPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thepaperpilot/kiosk/panels/TopLevelPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="69" selection-start="915" selection-end="915" vertical-scroll-proportion="0.33263597" vertical-offset="232" max-vertical-offset="816">
+          <folding>
+            <element signature="e#974#975#0" expanded="true" />
           </folding>
         </state>
       </provider>

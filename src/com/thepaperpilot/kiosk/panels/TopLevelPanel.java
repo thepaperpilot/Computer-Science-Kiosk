@@ -26,7 +26,6 @@ public abstract class TopLevelPanel extends Panel implements Comparable<TopLevel
 
         button.addListener(new ClickListener() {
             public void clicked(InputEvent event, float x, float y) {
-                System.out.println("!");
                 Kiosk.changePanel(getSelf());
             }
         });
