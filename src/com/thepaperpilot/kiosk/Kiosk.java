@@ -71,7 +71,6 @@ public class Kiosk implements ApplicationListener {
         manager.load("Graphics/tempSkin.json", Skin.class);
         manager.finishLoading();
         skin = manager.get("Graphics/tempSkin.json");
-        skin.getFont("font").setScale(.5f);
 
         Panel main = new Panel() {
             @Override
