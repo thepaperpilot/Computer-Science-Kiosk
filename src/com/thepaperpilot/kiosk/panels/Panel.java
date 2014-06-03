@@ -26,8 +26,10 @@ public abstract class Panel implements Screen {
     void initialize(String title, String bodyText) {
         Table body = new Table(Kiosk.skin);
         Label temp = new Label(bodyText, Kiosk.skin);
-        temp.setAlignment(Align.left);
-        body.top().add(temp).pad(Kiosk.PADDING);
+        temp.setFillParent(true);
+        temp.setWrap(true);
+        temp.setAlignment(Align.center);
+        body.left().add(temp).pad(Kiosk.PADDING);
         initialize(title, body);
     }
 
