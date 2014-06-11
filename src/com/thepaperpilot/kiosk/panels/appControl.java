@@ -28,6 +28,7 @@ public class appControl extends TopLevelPanel {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 //Kiosk.changePanel(new tempPanel());
+                //TODO Add "Drew want a loady thingy here"
                 try {
                     System.out.println("Opening Scratch");
                     Runtime runTime = Runtime.getRuntime();
