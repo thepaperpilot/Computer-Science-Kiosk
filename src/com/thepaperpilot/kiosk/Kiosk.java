@@ -10,6 +10,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.thepaperpilot.kiosk.panels.Panel;
 import com.thepaperpilot.kiosk.panels.TopLevelPanel;
+import com.thepaperpilot.kiosk.panels.appControl;
 import com.thepaperpilot.kiosk.panels.tempTopLevelPanel;
 
 import java.util.ArrayList;
@@ -80,6 +81,7 @@ public class Kiosk implements ApplicationListener {
                 // TODO add top level panels here
                 ArrayList<TopLevelPanel> panels = new ArrayList<>();
                 panels.add(new tempTopLevelPanel());
+                panels.add(new appControl());
 
                 Collections.sort(panels);
 
