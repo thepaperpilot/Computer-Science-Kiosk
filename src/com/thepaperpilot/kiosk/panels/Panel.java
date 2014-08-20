@@ -1,7 +1,9 @@
 package com.thepaperpilot.kiosk.panels;
 
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
@@ -14,8 +16,8 @@ import com.thepaperpilot.kiosk.Kiosk;
 
 public abstract class Panel implements Screen {
 
-    Label title;
     public Stage stage;
+	Label title;
 
     public Panel() {
         initialize();
@@ -64,6 +66,17 @@ public abstract class Panel implements Screen {
         stage = new Stage(new ScreenViewport());
         stage.addActor(panel);        // Position 0 (index)
         stage.addActor(back);         // Position 1 (index)
+
+	    stage.addListener(new InputListener() {
+		    @Override
+		    public boolean keyDown(InputEvent event, int keycode) {
+			    if(keycode == Input.Keys.BACK) {
+				    Kiosk.back();
+				    return true;
+			    }
+			    return false;
+		    }
+	    });
     }
 
     public void render(float delta) {

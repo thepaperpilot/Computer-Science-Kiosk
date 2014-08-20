@@ -86,6 +86,7 @@ public class Kiosk implements ApplicationListener {
         manager.load("Graphics/skin.json", Skin.class);
         manager.finishLoading();
         skin = manager.get("Graphics/skin.json");
+	    Gdx.input.setCatchBackKey(true);
 
         Panel main = new Panel() {
             @Override
