@@ -8,8 +8,8 @@ import com.thepaperpilot.kiosk.Kiosk;
 
 public abstract class TopLevelPanel extends Panel implements Comparable<TopLevelPanel> {
 
-    private int priority;
     public Table button;
+	private int priority;
 
     TopLevelPanel() {
         initialize();
@@ -21,8 +21,8 @@ public abstract class TopLevelPanel extends Panel implements Comparable<TopLevel
     void initializeTL(String label, int priority) {
         this.priority = priority;
         button = new Table(Kiosk.skin);
-        button.add(label).row();
-        button.add(new TextButton(String.valueOf(title.getText()), Kiosk.skin));
+	    button.add(label).height(50).row();
+	    button.add(new TextButton(String.valueOf(title.getText()), Kiosk.skin)).width(300);
 
         button.addListener(new ClickListener() {
             public void clicked(InputEvent event, float x, float y) {

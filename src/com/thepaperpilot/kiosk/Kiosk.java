@@ -77,8 +77,8 @@ public class Kiosk implements ApplicationListener {
 
                 // TODO add top level panels here
                 ArrayList<TopLevelPanel> panels = new ArrayList<>();
-                panels.add(new tempTopLevelPanel());
-                panels.add(new appControl());
+	            panels.add(new Introduction());
+	            panels.add(new appControl());
 	            panels.add(new ScratchTut());
 
                 Collections.sort(panels);
@@ -87,13 +87,15 @@ public class Kiosk implements ApplicationListener {
                 stage.getActors().removeIndex(1);
 
                 Table panelTable = new Table(Kiosk.skin);
-                panelTable.top();
 
                 int currcol = 0;
                 for (final TopLevelPanel panel : panels) {
-                    panelTable.add(panel.button);
-                    currcol++;
-                    if (currcol > COL_SIZE) panelTable.row();
+	                panelTable.add(panel.button).pad(10);
+	                currcol++;
+	                if(currcol >= COL_SIZE) {
+		                panelTable.row().padBottom(10);
+		                currcol = 0;
+	                }
                 }
 
                 stage.addActor(panelTable);

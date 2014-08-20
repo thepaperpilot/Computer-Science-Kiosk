@@ -1,20 +1,20 @@
 {
-com.badlogic.gdx.graphics.g2d.BitmapFont: { font: { file: Graphics/kenpixel-32.fnt }, largeFont: { file: Graphics/kenpixel-48.fnt } },
+com.badlogic.gdx.graphics.g2d.BitmapFont: { font: { file: Graphics/arial-32.fnt }, largeFont: { file: Graphics/arial-48.fnt } },
 com.badlogic.gdx.graphics.Color: {
 	black: { a: 1, b: 0, g: 0, r: 0 }
 },
 com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
-	default: { down: blue_button02, up: blue_button03 }
+	default: { down: blue_button10, up: blue_button12 }
 },
 com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
-	default: { down: blue_button02, up: blue_button03, fontColor: black, font: font },
-    large: { down: blue_button02, up: blue_button03, fontColor: black, font: largeFont }
+	default: { down: blue_button10, up: blue_button12, fontColor: black, font: font },
+    large: { down: blue_button10, up: blue_button12, fontColor: black, font: largeFont }
 },
 com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
 	default: { fontColor: black, font: font },
 	large: { fontColor: black, font: largeFont }
 },
 com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
-	default: { }
+	default: { background: dropdownMid}
 },
 }

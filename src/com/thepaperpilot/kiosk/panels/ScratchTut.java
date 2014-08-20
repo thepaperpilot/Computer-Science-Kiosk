@@ -12,7 +12,7 @@ import com.thepaperpilot.kiosk.Kiosk;
 public class ScratchTut extends TopLevelPanel{
 	@Override
 	public void initializeTL() {
-		initializeTL("Learn Scratch!", 2);
+		initializeTL(1);
 	}
 
 	@Override
@@ -121,7 +121,6 @@ public class ScratchTut extends TopLevelPanel{
 		});
 		TextButton operator = new TextButton("Operator Blocks", Kiosk.skin);
 		operator.getLabel().setWrap(true);
-		operator.getLabel().setFontScale(.8f);
 		operator.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
@@ -139,17 +138,17 @@ public class ScratchTut extends TopLevelPanel{
 						"custom blocks. This is where you would input plugins if you were to use them.");
 			}
 		});
-		tabs.add(general).padBottom(5).row();
-		tabs.add(motion).padBottom(5).row();
-		tabs.add(look).padBottom(5).row();
-		tabs.add(sound).padBottom(5).row();
-		tabs.add(pen).padBottom(5).row();
-		tabs.add(data).padBottom(5).row();
-		tabs.add(event).padBottom(5).row();
-		tabs.add(control).padBottom(5).row();
-		tabs.add(sensing).padBottom(5).row();
-		tabs.add(operator).padBottom(5).row();
-		tabs.add(more).padBottom(5).row();
+		tabs.add(general).width(190).padBottom(5).row();
+		tabs.add(motion).width(190).padBottom(5).row();
+		tabs.add(look).width(190).padBottom(5).row();
+		tabs.add(sound).width(190).padBottom(5).row();
+		tabs.add(pen).width(190).padBottom(5).row();
+		tabs.add(data).width(190).padBottom(5).row();
+		tabs.add(event).width(190).padBottom(5).row();
+		tabs.add(control).width(190).padBottom(5).row();
+		tabs.add(sensing).width(190).padBottom(5).row();
+		tabs.add(operator).width(190).padBottom(5).row();
+		tabs.add(more).width(190).padBottom(5).row();
 
 		panel.left();
 		panel.add(new ScrollPane(tabs, Kiosk.skin)).height(600).width(200);

@@ -48,9 +48,9 @@ public abstract class Panel implements Screen {
 
         Table panel = new Table(Kiosk.skin);
         panel.setPosition(-Kiosk.WIDTH / 2 + Kiosk.PADDING, -Kiosk.HEIGHT / 2 + Kiosk.PADDING);
-        panel.setBackground(Kiosk.skin.getDrawable("blue_button07"));
-        panel.setSize(Kiosk.WIDTH - Kiosk.PADDING * 2, Kiosk.HEIGHT - Kiosk.PADDING * 2);
-        panel.top().add(title).fillX().padBottom(Kiosk.PADDING).row();
+	    panel.setBackground(Kiosk.skin.getDrawable("blue_panel"));
+	    panel.setSize(Kiosk.WIDTH - Kiosk.PADDING * 2, Kiosk.HEIGHT - Kiosk.PADDING * 2);
+	    panel.top().add(title).fillX().padBottom(Kiosk.PADDING).row();
         panel.top().add(body).expand().fill().pad(Kiosk.PADDING);
 
         TextButton back = new TextButton("Back", Kiosk.skin, "large");
