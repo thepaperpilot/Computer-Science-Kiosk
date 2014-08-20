@@ -53,7 +53,7 @@ public abstract class Panel implements Screen {
 
         TextButton back = new TextButton("Back", Kiosk.skin, "large");
         back.getLabel().setAlignment(Align.bottom);
-        back.setSize(120, 80);
+        back.setSize(160, 80);
         back.setPosition(-Kiosk.WIDTH / 2 + Kiosk.PADDING * 2, Kiosk.HEIGHT / 2 - 70);
         back.addListener(new ClickListener() {
             public void clicked(InputEvent event, float x, float y) {

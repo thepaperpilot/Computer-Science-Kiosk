@@ -83,9 +83,9 @@ public class Kiosk implements ApplicationListener {
     public void create() {
         // Loads and configures the skin for the UI
         AssetManager manager = new AssetManager();
-        manager.load("Graphics/tempSkin.json", Skin.class);
+        manager.load("Graphics/skin.json", Skin.class);
         manager.finishLoading();
-        skin = manager.get("Graphics/tempSkin.json");
+        skin = manager.get("Graphics/skin.json");
 
         Panel main = new Panel() {
             @Override

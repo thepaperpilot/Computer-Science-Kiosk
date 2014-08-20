@@ -20,9 +20,9 @@ public class ScratchTut extends TopLevelPanel{
 		Table panel = new Table();
 		Table tabs = new Table();
 
-		final Label body = new Label("Scratch is an entirely free program created by Lifelong Kindergarten Group at the MIT Media Lab.\n" +
-				"Scratch is designed as an introduction to programing. It is quite simple to understand, doesn’t require \n" +
-				"the memorization needed for most programing, however still allows for creative “Hello World”-esque \n" +
+		final Label body = new Label("Scratch is an entirely free program created by Lifelong Kindergarten Group at the MIT Media Lab." +
+				"Scratch is designed as an introduction to programing. It is quite simple to understand, doesn’t require " +
+				"the memorization needed for most programing, however still allows for creative “Hello World”-esque " +
 				"programs. Scratch helps people to think logically, systematically, and creatively, problem solve, etc.", Kiosk.skin);
 		body.setWrap(true);
 		body.setAlignment(Align.center);
@@ -32,9 +32,9 @@ public class ScratchTut extends TopLevelPanel{
 		general.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				body.setText("Scratch is an entirely free program created by Lifelong Kindergarten Group at the MIT Media Lab.\n" +
-						"Scratch is designed as an introduction to programing. It is quite simple to understand, doesn’t require \n" +
-						"the memorization needed for most programing, however still allows for creative “Hello World”-esque \n" +
+				body.setText("Scratch is an entirely free program created by Lifelong Kindergarten Group at the MIT Media Lab." +
+						"Scratch is designed as an introduction to programing. It is quite simple to understand, doesn’t require " +
+						"the memorization needed for most programing, however still allows for creative “Hello World”-esque " +
 						"programs. Scratch helps people to think logically, systematically, and creatively, problem solve, etc.");
 			}
 		});
@@ -43,8 +43,8 @@ public class ScratchTut extends TopLevelPanel{
 		motion.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				body.setText("Scratch 2.0 has 17 different types of motion blocks. Motion blocks are used to control how a sprite \n" +
-						"moves, such as sending it to a specified place, or moving it a specified amount in a given direction.\n" +
+				body.setText("Scratch 2.0 has 17 different types of motion blocks. Motion blocks are used to control how a sprite " +
+						"moves, such as sending it to a specified place, or moving it a specified amount in a given direction." +
 						"You can also use motion blocks to glide a sprite to a specified place over a specified amount of time.");
 			}
 		});
@@ -53,8 +53,8 @@ public class ScratchTut extends TopLevelPanel{
 		look.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				body.setText("Scratch 2.0 has 23 different types of looks blocks. Looks blocks control how a sprite looks, such as\n" +
-						"making a temporary or permanent thought or talk bubble, or controlling how big a sprite is, or even if \n" +
+				body.setText("Scratch 2.0 has 23 different types of looks blocks. Looks blocks control how a sprite looks, such as" +
+						"making a temporary or permanent thought or talk bubble, or controlling how big a sprite is, or even if " +
 						"you can see the sprite or not.");
 			}
 		});
@@ -63,8 +63,8 @@ public class ScratchTut extends TopLevelPanel{
 		sound.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				body.setText("Scratch 2.0 has 13 different types of sound blocks. Sound blocks control sounds and MIDI functions,\n" +
-						"such as playing sounds, or playing sounds that pause the script. You can also use sound blocks to \n" +
+				body.setText("Scratch 2.0 has 13 different types of sound blocks. Sound blocks control sounds and MIDI functions," +
+						"such as playing sounds, or playing sounds that pause the script. You can also use sound blocks to " +
 						"change the volume or tempo by a certain amount, or set the volume or tempo to a specific amount.");
 			}
 		});
@@ -73,8 +73,8 @@ public class ScratchTut extends TopLevelPanel{
 		pen.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				body.setText("Scratch 2.0 has 11 different types of pen blocks. Pen blocks control the pen, such as changing or setting\n" +
-						"the pen size or shade amount. You can also use pen blocks to clear all the pen marks on screen or\n" +
+				body.setText("Scratch 2.0 has 11 different types of pen blocks. Pen blocks control the pen, such as changing or setting" +
+						"the pen size or shade amount. You can also use pen blocks to clear all the pen marks on screen or" +
 						"stamp the sprite's image onto the screen.");
 			}
 		});
@@ -83,8 +83,8 @@ public class ScratchTut extends TopLevelPanel{
 		data.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				body.setText("Scratch 2.0 has 15 different types of data blocks. There is two types of data blocks: variable and list \n" +
-						"blocks. Variable blocks hold and change values and strings. List blocks control lists, such as adding, \n" +
+				body.setText("Scratch 2.0 has 15 different types of data blocks. There is two types of data blocks: variable and list " +
+						"blocks. Variable blocks hold and change values and strings. List blocks control lists, such as adding, " +
 						"deleting, and changing certain parts of a given list.");
 			}
 		});
@@ -93,9 +93,9 @@ public class ScratchTut extends TopLevelPanel{
 		event.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				body.setText("Scratch 2.0 has 8 different types of event blocks. Event blocks allow you to direct the program, such \n" +
-						"as activating certain scripts when the flag is pressed or activating certain scripts when a certain key is \n" +
-						"pressed. You can also use event blocks to activates scripts when the sprite is clicked or when there is a \n" +
+				body.setText("Scratch 2.0 has 8 different types of event blocks. Event blocks allow you to direct the program, such " +
+						"as activating certain scripts when the flag is pressed or activating certain scripts when a certain key is " +
+						"pressed. You can also use event blocks to activates scripts when the sprite is clicked or when there is a " +
 						"certain backdrop.");
 			}
 		});
@@ -104,8 +104,8 @@ public class ScratchTut extends TopLevelPanel{
 		control.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				body.setText("Scratch 2.0 has 11 different types of control blocks. Control blocks allow you to control scripts, such as\n" +
-						"pausing a script for a certain amount of time or pausing a script until a given condition is true. They can \n" +
+				body.setText("Scratch 2.0 has 11 different types of control blocks. Control blocks allow you to control scripts, such as" +
+						"pausing a script for a certain amount of time or pausing a script until a given condition is true. They can " +
 						"also create loops that loop a certain amount of times or loops that continue forever.");
 			}
 		});
@@ -114,18 +114,19 @@ public class ScratchTut extends TopLevelPanel{
 		sensing.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				body.setText("Scratch 2.0 has 20 different types of sensing blocks. Sensing blocks detect certain conditions, such as if\n" +
-						"a sprite is touching something else or if a certain key is being pressed. They can also detect the mouse's \n" +
+				body.setText("Scratch 2.0 has 20 different types of sensing blocks. Sensing blocks detect certain conditions, such as if" +
+						"a sprite is touching something else or if a certain key is being pressed. They can also detect the mouse's " +
 						"location and how many days it has been since 2000.");
 			}
 		});
 		TextButton operator = new TextButton("Operator Blocks", Kiosk.skin);
 		operator.getLabel().setWrap(true);
+		operator.getLabel().setFontScale(.8f);
 		operator.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				body.setText("Scratch 2.0 has 17 different types of operator blocks. Operator blocks handle various math functions,\n" +
-						"such as simple addition and subtraction or complex functions such as tangent, sine, and cosine. It can \n" +
+				body.setText("Scratch 2.0 has 17 different types of operator blocks. Operator blocks handle various math functions," +
+						"such as simple addition and subtraction or complex functions such as tangent, sine, and cosine. It can " +
 						"also pick a “random” number between two integers or round a value to the closest whole number.");
 			}
 		});
@@ -134,7 +135,7 @@ public class ScratchTut extends TopLevelPanel{
 		more.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				body.setText("Scratch 2.0 has 2 different types of “more blocks”. More blocks are used to allow the user to make \n" +
+				body.setText("Scratch 2.0 has 2 different types of “more blocks”. More blocks are used to allow the user to make " +
 						"custom blocks. This is where you would input plugins if you were to use them.");
 			}
 		});
@@ -152,7 +153,7 @@ public class ScratchTut extends TopLevelPanel{
 
 		panel.left();
 		panel.add(new ScrollPane(tabs, Kiosk.skin)).height(600).width(200);
-		panel.add(body).expandX();
+		panel.add(body).expandX().fillX();
 
 		initialize("How To Scratch", panel);
 	}

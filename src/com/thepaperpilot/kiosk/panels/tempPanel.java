@@ -4,6 +4,7 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.utils.Align;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.thepaperpilot.kiosk.Kiosk;
 
@@ -11,7 +12,10 @@ public class tempPanel extends Panel {
     @Override
     public void initialize() {
         Table body = new Table(Kiosk.skin);
-        body.top().add("I am a label. I have this row all to myself, and have 20 pixels all around me").pad(20).row();
+	    Label label = new Label("I am a label. I have this row all to myself, and have 20 pixels all around me", Kiosk.skin);
+	    label.setWrap(true);
+	    label.setAlignment(Align.center);
+        body.top().add(label).width(Kiosk.WIDTH - Kiosk.PADDING * 3).pad(20).row();
 
         TextButton innerPanel = new TextButton("I am a button leading to an inner panel", Kiosk.skin);
         innerPanel.getLabel().setWrap(true);
