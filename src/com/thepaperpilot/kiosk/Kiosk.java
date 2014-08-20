@@ -6,6 +6,7 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.thepaperpilot.kiosk.panels.Panel;
@@ -52,16 +53,29 @@ public class Kiosk implements ApplicationListener {
         }
     }
 
-    public static void changePanel(Panel toPanel) {
+    public static void changePanel(final Panel toPanel) {
         panelHistory.add(getPanel());
-        // TODO Fade transition
-        setPanel(toPanel);
-        Gdx.input.setInputProcessor(toPanel.stage);
+        getPanel().stage.addAction(Actions.sequence(Actions.fadeOut(.2f), Actions.run(new Runnable() {
+	        @Override
+	        public void run() {
+		        setPanel(toPanel);
+		        Gdx.input.setInputProcessor(getPanel().stage);
+		        getPanel().stage.addAction(Actions.sequence(Actions.fadeOut(0), Actions.fadeIn(.2f)));
+	        }
+        })));
     }
 
     public static void back() {
-        if (!panelHistory.isEmpty()) setPanel(panelHistory.remove(panelHistory.size() - 1));
-        Gdx.input.setInputProcessor(getPanel().stage);
+        if (!panelHistory.isEmpty()) {
+	        getPanel().stage.addAction(Actions.sequence(Actions.fadeOut(.2f), Actions.run(new Runnable() {
+		        @Override
+		        public void run() {
+			        setPanel(panelHistory.remove(panelHistory.size() - 1));
+			        Gdx.input.setInputProcessor(getPanel().stage);
+			        getPanel().stage.addAction(Actions.sequence(Actions.fadeOut(0), Actions.fadeIn(.2f)));
+		        }
+	        })));
+        }
     }
 
     @Override

@@ -67,7 +67,8 @@ public abstract class Panel implements Screen {
     }
 
     public void render(float delta) {
-        stage.draw();
+        stage.act(delta);
+	    stage.draw();
     }
 
     public void resize(int width, int height) {
