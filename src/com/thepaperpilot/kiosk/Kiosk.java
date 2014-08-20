@@ -107,7 +107,7 @@ public class Kiosk implements ApplicationListener {
 
                 int currcol = 0;
                 for (final TopLevelPanel panel : panels) {
-                    panelTable.add(panel.button);
+                    panelTable.add(panel.button).pad(Kiosk.PADDING);
                     currcol++;
                     if (currcol > COL_SIZE) panelTable.row();
                 }
