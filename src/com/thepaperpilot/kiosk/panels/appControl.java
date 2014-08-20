@@ -12,7 +12,7 @@ public class appControl extends TopLevelPanel {
 	    button.getListeners().clear();
 	    button.addListener(new ClickListener() {
 		    public void clicked(InputEvent event, float x, float y) {
-			    // TODO loading bar
+			    // TODO loading message
 			    try {
 				    Runtime.getRuntime().exec("C:\\Program Files (x86)\\Scratch 2\\Scratch 2.exe");
 			    } catch(IOException e) {
