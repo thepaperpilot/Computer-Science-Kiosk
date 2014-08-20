@@ -13,7 +13,7 @@ public class tempTopLevelPanel extends TopLevelPanel {
     public void initialize() {
         Table body = new Table(Kiosk.skin);
         body.top().add(new Label("This is a body", Kiosk.skin)).row();
-        TextButton subPanel = new TextButton("I go to a subpanel", Kiosk.skin);
+        TextButton subPanel = new TextButton("I go to a JUST subpanel", Kiosk.skin);
         subPanel.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {

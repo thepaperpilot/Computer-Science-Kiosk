@@ -6,13 +6,9 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.thepaperpilot.kiosk.panels.Panel;
-import com.thepaperpilot.kiosk.panels.ScratchTut;
-import com.thepaperpilot.kiosk.panels.TopLevelPanel;
-import com.thepaperpilot.kiosk.panels.tempTopLevelPanel;
+import com.thepaperpilot.kiosk.panels.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -54,39 +50,25 @@ public class Kiosk implements ApplicationListener {
         }
     }
 
-    public static void changePanel(final Panel toPanel) {
+    public static void changePanel(Panel toPanel) {
         panelHistory.add(getPanel());
-        getPanel().stage.addAction(Actions.sequence(Actions.fadeOut(.2f), Actions.run(new Runnable() {
-	        @Override
-	        public void run() {
-		        setPanel(toPanel);
-		        Gdx.input.setInputProcessor(getPanel().stage);
-		        getPanel().stage.addAction(Actions.sequence(Actions.fadeOut(0), Actions.fadeIn(.2f)));
-	        }
-        })));
+        // TODO Fade transition
+        setPanel(toPanel);
+        Gdx.input.setInputProcessor(toPanel.stage);
     }
 
     public static void back() {
-        if (!panelHistory.isEmpty()) {
-	        getPanel().stage.addAction(Actions.sequence(Actions.fadeOut(.2f), Actions.run(new Runnable() {
-		        @Override
-		        public void run() {
-			        setPanel(panelHistory.remove(panelHistory.size() - 1));
-			        Gdx.input.setInputProcessor(getPanel().stage);
-			        getPanel().stage.addAction(Actions.sequence(Actions.fadeOut(0), Actions.fadeIn(.2f)));
-		        }
-	        })));
-        }
+        if (!panelHistory.isEmpty()) setPanel(panelHistory.remove(panelHistory.size() - 1));
+        Gdx.input.setInputProcessor(getPanel().stage);
     }
 
     @Override
     public void create() {
         // Loads and configures the skin for the UI
         AssetManager manager = new AssetManager();
-        manager.load("Graphics/skin.json", Skin.class);
+        manager.load("Graphics/tempSkin.json", Skin.class);
         manager.finishLoading();
-        skin = manager.get("Graphics/skin.json");
-	    Gdx.input.setCatchBackKey(true);
+        skin = manager.get("Graphics/tempSkin.json");
 
         Panel main = new Panel() {
             @Override
@@ -95,7 +77,8 @@ public class Kiosk implements ApplicationListener {
 
                 // TODO add top level panels here
                 ArrayList<TopLevelPanel> panels = new ArrayList<>();
-	            panels.add(new tempTopLevelPanel());
+                panels.add(new tempTopLevelPanel());
+                panels.add(new appControl());
 	            panels.add(new ScratchTut());
 
                 Collections.sort(panels);
@@ -108,7 +91,7 @@ public class Kiosk implements ApplicationListener {
 
                 int currcol = 0;
                 for (final TopLevelPanel panel : panels) {
-                    panelTable.add(panel.button).pad(Kiosk.PADDING);
+                    panelTable.add(panel.button);
                     currcol++;
                     if (currcol > COL_SIZE) panelTable.row();
                 }
