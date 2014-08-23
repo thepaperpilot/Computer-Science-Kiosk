@@ -81,6 +81,7 @@ public class Kiosk implements ApplicationListener {
 	            panels.add(new appControl());
 	            panels.add(new ScratchTut());
 	            panels.add(new LogicGates());
+	            panels.add(new PostScratch());
 
                 Collections.sort(panels);
 
