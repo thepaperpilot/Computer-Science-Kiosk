@@ -32,7 +32,7 @@ public class Kiosk implements ApplicationListener {
         cfg.height = HEIGHT;
         // Full screen is annoying while developing
         // Make sure to uncomment this in any shippable version
-        // cfg.fullscreen = true;
+	    //cfg.fullscreen = true;
 
         new LwjglApplication(new Kiosk(), cfg);
     }
