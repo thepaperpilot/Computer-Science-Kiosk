@@ -20,7 +20,7 @@ public class ScratchTut extends TopLevelPanel{
 		Table panel = new Table();
 		Table tabs = new Table();
 
-		final Label body = new Label("Scratch is an entirely free program created by Lifelong Kindergarten Group at the MIT Media Lab." +
+		final Label body = new Label("Scratch is an entirely free program created by\n Lifelong Kindergarten Group at the MIT Media Lab.\n\n" +
 				"Scratch is designed as an introduction to programing. It is quite simple to understand, doesn’t require " +
 				"the memorization needed for most programing, however still allows for creative “Hello World”-esque " +
 				"programs. Scratch helps people to think logically, systematically, and creatively, problem solve, etc.", Kiosk.skin);
@@ -33,8 +33,10 @@ public class ScratchTut extends TopLevelPanel{
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
 				body.setText("Scratch is an entirely free program created by Lifelong Kindergarten Group at the MIT Media Lab." +
-						"Scratch is designed as an introduction to programing. It is quite simple to understand, doesn’t require " +
-						"the memorization needed for most programing, however still allows for creative “Hello World”-esque " +
+						"Scratch is designed as an introduction to programing. " +
+                        ""+
+                        "It is quite simple to understand, doesn’t require the memorization needed for most programing,"+
+                        "however still allows for creative “Hello World”-esque " +
 						"programs. Scratch helps people to think logically, systematically, and creatively, problem solve, etc.");
 			}
 		});

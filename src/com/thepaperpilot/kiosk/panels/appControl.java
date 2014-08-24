@@ -12,10 +12,17 @@ public class appControl extends TopLevelPanel {
 	    button.getListeners().clear();
 	    button.addListener(new ClickListener() {
 		    public void clicked(InputEvent event, float x, float y) {
-			    // TODO loading message
+			    // TODO ANTHONY to make change PrintLn statements into dialogs
 			    try {
-				    Runtime.getRuntime().exec("C:\\Program Files (x86)\\Scratch 2\\Scratch 2.exe");
-			    } catch(IOException e) {
+                    // TODO Update usage metrics: Start Scratch
+                    System.out.println("Please wait while we launch Scratch.   To return here, exit Scratch.\n");
+                    System.out.println("Please don't save your scratch programs as this tablet PC is refreshed regularly and your saved files will be wiped out.\n");
+                    System.out.println("Please note:\n that this computer does not have access to the internet.\n Some features in Scratch, such as \'About\' will not work as expected.");
+                    Process p = Runtime.getRuntime().exec("C:\\Program Files (x86)\\Scratch 2\\Scratch 2.exe");
+                    // cause this process to stop until process p is terminated
+                    p.waitFor();
+                    // TODO Update usage metrics: End Scratch
+			    } catch(IOException|InterruptedException e) {
 				    e.printStackTrace();
 			    }
 		    }
