@@ -11,8 +11,10 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.thepaperpilot.kiosk.panels.*;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class Kiosk implements ApplicationListener {
 
@@ -27,6 +29,7 @@ public class Kiosk implements ApplicationListener {
 	public static Skin skin;
 	public static AssetManager manager;
 	private static Panel panel;
+	private static ArrayList<TopLevelPanel> panels;
 
 	public static void main(String[] args) {
 		LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
@@ -56,11 +59,28 @@ public class Kiosk implements ApplicationListener {
 		panelHistory.add(getPanel());
 		setPanel(toPanel);
 		Gdx.input.setInputProcessor(toPanel.stage);
+
+		if(toPanel instanceof TopLevelPanel) {
+			((TopLevelPanel) toPanel).start = System.currentTimeMillis();
+		}
 	}
 
 	public static void back() {
+		if(panels.contains(getPanel())) {
+			TopLevelPanel topLevelPanel = (TopLevelPanel) getPanel();
+			topLevelPanel.time += System.currentTimeMillis() - topLevelPanel.start;
+			writeMetrics();
+		}
 		if(!panelHistory.isEmpty()) setPanel(panelHistory.remove(panelHistory.size() - 1));
 		Gdx.input.setInputProcessor(getPanel().stage);
+	}
+
+	public static void writeMetrics() {
+		StringBuilder stringBuilder = new StringBuilder();
+		for(TopLevelPanel panel : panels) {
+			stringBuilder.append(panel.time).append("\n");
+		}
+		Gdx.files.absolute("C://Kiosk/usage.dat").writeString(stringBuilder.toString(), false);
 	}
 
 	@Override
@@ -81,13 +101,15 @@ public class Kiosk implements ApplicationListener {
 				initialize("", body);
 				stage.getActors().removeIndex(1);
 
-				ArrayList<TopLevelPanel> panels = new ArrayList<>();
+				panels = new ArrayList<>();
 				panels.add(new Introduction());
 				panels.add(new appControl(stage));
 				panels.add(new ScratchTut());
 				panels.add(new LogicGates());
 				panels.add(new PostScratch());
 				panels.add(new Resources());
+
+				readMetrics();
 
 				Collections.sort(panels);
 
@@ -110,6 +132,21 @@ public class Kiosk implements ApplicationListener {
 		panelHistory.add(main);
 
 		Gdx.input.setInputProcessor(getPanel().stage);
+	}
+
+	private void readMetrics() {
+		try {
+			if(!Gdx.files.absolute("C://Kiosk/usage.dat").exists())
+				writeMetrics();
+			Scanner scanner = new Scanner(Gdx.files.absolute("C://Kiosk/usage.dat").file());
+			int index = 0;
+			while(scanner.hasNextLine()) {
+				panels.get(index).time = Long.parseLong(scanner.nextLine());
+				index++;
+			}
+		} catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override

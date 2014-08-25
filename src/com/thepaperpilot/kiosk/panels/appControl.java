@@ -16,30 +16,28 @@ public class appControl extends TopLevelPanel {
 
 	@Override
 	protected void initializeTL() {
-	    initializeTL(2);
-	    button.getListeners().clear();
-	    button.addListener(new ClickListener() {
-		    public void clicked(InputEvent event, float x, float y) {
-			    new Dialogue() {
-				    @Override
-				    public void click() {
-					    // TODO Update usage metrics: Start Scratch
-					    try {
-						    Process p = Runtime.getRuntime().exec("C:\\Program Files (x86)\\Scratch 2\\Scratch 2.exe");
-						    p.waitFor();
-						    // cause this process to stop until process p is terminated
-					    } catch(IOException | InterruptedException e) {
-						    e.printStackTrace();
-					    }
-					    // TODO Update usage metrics: End Scratch
-				    }
-			    };
-		    }
-	    });
-    }
+		initializeTL(2);
+		button.getListeners().clear();
+		button.addListener(new ClickListener() {
+			public void clicked(InputEvent event, float x, float y) {
+				new Dialogue() {
+					@Override
+					public void click() {
+						try {
+							Process p = Runtime.getRuntime().exec("C:\\Program Files (x86)\\Scratch 2\\Scratch 2.exe");
+							p.waitFor();
+							// cause this process to stop until process p is terminated
+						} catch(IOException | InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+				};
+			}
+		});
+	}
 
-    @Override
-    public void initialize() {
-	    initialize("Launch Scratch", "");
-    }
+	@Override
+	public void initialize() {
+		initialize("Launch Scratch", "");
+	}
 }

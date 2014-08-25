@@ -9,10 +9,12 @@ import com.thepaperpilot.kiosk.Kiosk;
 public abstract class TopLevelPanel extends Panel implements Comparable<TopLevelPanel> {
 
     public Table button;
-	private int priority;
+	public int priority;
+	public long time = 0;
+	public long start;
 
-    TopLevelPanel() {
-        initialize();
+	TopLevelPanel() {
+		initialize();
         initializeTL();
     }
 
