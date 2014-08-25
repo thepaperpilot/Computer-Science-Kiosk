@@ -36,7 +36,7 @@ public class LogicGates extends TopLevelPanel {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
 				try {
-					Desktop.getDesktop().open(Gdx.files.external("Documents/Logic Gates.sb2").file());
+					Desktop.getDesktop().open(Gdx.files.absolute("C://Kiosk/Logic Gates.sb2").file());
 				} catch(IOException e) {
 					e.printStackTrace();
 				}
