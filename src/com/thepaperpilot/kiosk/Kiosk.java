@@ -78,19 +78,18 @@ public class Kiosk implements ApplicationListener {
 			@Override
 			public void initialize() {
 				Table body = new Table();
+				initialize("", body);
+				stage.getActors().removeIndex(1);
 
 				ArrayList<TopLevelPanel> panels = new ArrayList<>();
 				panels.add(new Introduction());
-				panels.add(new appControl());
+				panels.add(new appControl(stage));
 				panels.add(new ScratchTut());
 				panels.add(new LogicGates());
 				panels.add(new PostScratch());
 				panels.add(new Resources());
 
 				Collections.sort(panels);
-
-				initialize("", body);
-				stage.getActors().removeIndex(1);
 
 				Table panelTable = new Table(Kiosk.skin);
 

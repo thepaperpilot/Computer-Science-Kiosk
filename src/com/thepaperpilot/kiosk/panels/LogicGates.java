@@ -7,6 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.Align;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.thepaperpilot.kiosk.Dialogue;
 import com.thepaperpilot.kiosk.Kiosk;
 
 import java.awt.*;
@@ -35,11 +36,19 @@ public class LogicGates extends TopLevelPanel {
 		launch.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				try {
-					Desktop.getDesktop().open(Gdx.files.absolute("C://Kiosk/Logic Gates.sb2").file());
-				} catch(IOException e) {
-					e.printStackTrace();
-				}
+				new Dialogue() {
+					@Override
+					public void click() {
+						// TODO Update usage metrics: Start Logic Gates
+						try {
+							Desktop.getDesktop().open(Gdx.files.absolute("C://Kiosk/Logic Gates.sb2").file());
+							// Not stopping the program :/
+						} catch(IOException e) {
+							e.printStackTrace();
+						}
+						// TODO Update usage metrics: End Logic Gates
+					}
+				};
 			}
 		});
 		panel.add(launch);
