@@ -1,6 +1,7 @@
 package com.thepaperpilot.kiosk;
 
 import com.badlogic.gdx.ApplicationListener;
+import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
@@ -28,9 +29,10 @@ public class Kiosk implements ApplicationListener {
 		LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
 		cfg.width = Constants.WIDTH;
 		cfg.height = Constants.HEIGHT;
+		cfg.addIcon("Graphics/icon.png", Files.FileType.Internal);
 		// Full screen is annoying while developing
 		// Make sure to uncomment this in any shippable version
-		//cfg.fullscreen = true;
+		cfg.fullscreen = true;
 
 		new LwjglApplication(new Kiosk(), cfg);
 	}
