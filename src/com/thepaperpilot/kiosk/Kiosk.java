@@ -18,13 +18,6 @@ import java.util.Scanner;
 
 public class Kiosk implements ApplicationListener {
 
-	// Dimensions of the tablet: DO NOT CHANGE
-	public final static int WIDTH = 1366;
-	public final static int HEIGHT = 768;
-
-	public final static int PADDING = 10;
-
-	private static final int COL_SIZE = 3;
 	private final static ArrayList<Panel> panelHistory = new ArrayList<>();
 	public static Skin skin;
 	public static AssetManager manager;
@@ -33,8 +26,8 @@ public class Kiosk implements ApplicationListener {
 
 	public static void main(String[] args) {
 		LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
-		cfg.width = WIDTH;
-		cfg.height = HEIGHT;
+		cfg.width = Constants.WIDTH;
+		cfg.height = Constants.HEIGHT;
 		// Full screen is annoying while developing
 		// Make sure to uncomment this in any shippable version
 		//cfg.fullscreen = true;
@@ -75,12 +68,12 @@ public class Kiosk implements ApplicationListener {
 		Gdx.input.setInputProcessor(getPanel().stage);
 	}
 
-	public static void writeMetrics() {
+	private static void writeMetrics() {
 		StringBuilder stringBuilder = new StringBuilder();
 		for(TopLevelPanel panel : panels) {
 			stringBuilder.append(panel.time).append("\n");
 		}
-		Gdx.files.absolute("C://Kiosk/usage.dat").writeString(stringBuilder.toString(), false);
+		Gdx.files.absolute(Constants.DAT_PATH).writeString(stringBuilder.toString(), false);
 	}
 
 	@Override
@@ -119,7 +112,7 @@ public class Kiosk implements ApplicationListener {
 				for(final TopLevelPanel panel : panels) {
 					panelTable.add(panel.button).pad(10);
 					currcol++;
-					if(currcol >= COL_SIZE) {
+					if(currcol >= Constants.COL_SIZE) {
 						panelTable.row().padBottom(10);
 						currcol = 0;
 					}
@@ -136,9 +129,9 @@ public class Kiosk implements ApplicationListener {
 
 	private void readMetrics() {
 		try {
-			if(!Gdx.files.absolute("C://Kiosk/usage.dat").exists())
+			if(!Gdx.files.absolute(Constants.DAT_PATH).exists())
 				writeMetrics();
-			Scanner scanner = new Scanner(Gdx.files.absolute("C://Kiosk/usage.dat").file());
+			Scanner scanner = new Scanner(Gdx.files.absolute(Constants.DAT_PATH).file());
 			int index = 0;
 			while(scanner.hasNextLine()) {
 				panels.get(index).time = Long.parseLong(scanner.nextLine());

@@ -9,7 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.Align;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.thepaperpilot.kiosk.Kiosk;
 
-public class ScratchTut extends TopLevelPanel{
+public class ScratchTut extends TopLevelPanel {
 	@Override
 	public void initializeTL() {
 		initializeTL(1);

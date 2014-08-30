@@ -7,6 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.Align;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.thepaperpilot.kiosk.Constants;
 import com.thepaperpilot.kiosk.Dialogue;
 import com.thepaperpilot.kiosk.Kiosk;
 
@@ -31,8 +32,8 @@ public class LogicGates extends TopLevelPanel {
 				"There are many other logic gates that you can explore on your own. The button below will bring you to an interactive Scratch program where you can see how the gates interact for yourself!", Kiosk.skin);
 		info.setWrap(true);
 		info.setAlignment(Align.left);
-		panel.add(info).width(Kiosk.WIDTH - Kiosk.PADDING * 4).padBottom(70).row();
-		TextButton launch = new TextButton("Launch Scratch", Kiosk.skin);
+		panel.add(info).width(Constants.WIDTH - Constants.PADDING * 4).padBottom(70).row();
+		TextButton launch = new TextButton(Constants.RUN_SCRATCH, Kiosk.skin);
 		launch.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
@@ -41,7 +42,7 @@ public class LogicGates extends TopLevelPanel {
 					public void click() {
 						// TODO Update usage metrics: Start Logic Gates
 						try {
-							Desktop.getDesktop().open(Gdx.files.absolute("C://Kiosk/Logic Gates.sb2").file());
+							Desktop.getDesktop().open(Gdx.files.absolute(Constants.LOGIC_GATES_PATH).file());
 							// Not stopping the program :/
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -52,6 +53,6 @@ public class LogicGates extends TopLevelPanel {
 			}
 		});
 		panel.add(launch);
-		initialize("Logic Gates", panel);
+		initialize(Constants.LOGIC_GATES, panel);
 	}
 }

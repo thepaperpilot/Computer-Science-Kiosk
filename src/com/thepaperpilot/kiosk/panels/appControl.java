@@ -3,6 +3,7 @@ package com.thepaperpilot.kiosk.panels;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.thepaperpilot.kiosk.Constants;
 import com.thepaperpilot.kiosk.Dialogue;
 
 import java.io.IOException;
@@ -24,7 +25,7 @@ public class appControl extends TopLevelPanel {
 					@Override
 					public void click() {
 						try {
-							Process p = Runtime.getRuntime().exec("C:\\Program Files (x86)\\Scratch 2\\Scratch 2.exe");
+							Process p = Runtime.getRuntime().exec(Constants.SCRATCH_PATH);
 							p.waitFor();
 							// cause this process to stop until process p is terminated
 						} catch(IOException | InterruptedException e) {
@@ -38,6 +39,6 @@ public class appControl extends TopLevelPanel {
 
 	@Override
 	public void initialize() {
-		initialize("Launch Scratch", "");
+		initialize(Constants.RUN_SCRATCH, "");
 	}
 }

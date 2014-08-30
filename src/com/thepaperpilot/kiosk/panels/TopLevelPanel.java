@@ -8,41 +8,41 @@ import com.thepaperpilot.kiosk.Kiosk;
 
 public abstract class TopLevelPanel extends Panel implements Comparable<TopLevelPanel> {
 
-    public Table button;
-	public int priority;
+	public Table button;
 	public long time = 0;
 	public long start;
+	private int priority;
 
 	TopLevelPanel() {
 		initialize();
-        initializeTL();
-    }
+		initializeTL();
+	}
 
-    protected abstract void initializeTL();
+	protected abstract void initializeTL();
 
-    void initializeTL(String label, int priority) {
-        this.priority = priority;
-        button = new Table(Kiosk.skin);
-	    button.add(label).height(50).row();
-	    button.add(new TextButton(String.valueOf(title.getText()), Kiosk.skin)).width(300);
+	void initializeTL(String label, int priority) {
+		this.priority = priority;
+		button = new Table(Kiosk.skin);
+		button.add(label).height(50).row();
+		button.add(new TextButton(String.valueOf(title.getText()), Kiosk.skin)).width(300);
 
-        button.addListener(new ClickListener() {
-            public void clicked(InputEvent event, float x, float y) {
-                Kiosk.changePanel(getSelf());
-            }
-        });
-    }
+		button.addListener(new ClickListener() {
+			public void clicked(InputEvent event, float x, float y) {
+				Kiosk.changePanel(getSelf());
+			}
+		});
+	}
 
-    public void initializeTL(int priority) {
-        initializeTL("", priority);
-    }
+	void initializeTL(int priority) {
+		initializeTL("", priority);
+	}
 
-    @Override
-    public int compareTo(TopLevelPanel o) {
-        return priority - o.priority;
-    }
+	@Override
+	public int compareTo(TopLevelPanel o) {
+		return priority - o.priority;
+	}
 
-    Panel getSelf() {
-        return this;
-    }
+	Panel getSelf() {
+		return this;
+	}
 }
