@@ -2,8 +2,6 @@ package com.thepaperpilot.kiosk;
 
 public class Constants {
 
-	public final static String RUN_SCRATCH = "Launch Scratch";
-	public final static String LOGIC_GATES = "Logic Gates";
 	public final static String DAT_PATH = "C://Kiosk/usage.dat";
 	public final static String LOGIC_GATES_PATH = "C://Kiosk/logic gates.sb";
 	public final static String SCRATCH_PATH = "C://Program Files (x86)/Scratch 2/Scratch 2.exe";

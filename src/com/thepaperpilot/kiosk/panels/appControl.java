@@ -39,6 +39,6 @@ public class appControl extends TopLevelPanel {
 
 	@Override
 	public void initialize() {
-		initialize(Constants.RUN_SCRATCH, "");
+		initialize("Launch Scratch", "");
 	}
 }

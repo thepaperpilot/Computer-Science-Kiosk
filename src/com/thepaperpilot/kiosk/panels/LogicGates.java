@@ -33,7 +33,7 @@ public class LogicGates extends TopLevelPanel {
 		info.setWrap(true);
 		info.setAlignment(Align.left);
 		panel.add(info).width(Constants.WIDTH - Constants.PADDING * 4).padBottom(70).row();
-		TextButton launch = new TextButton(Constants.RUN_SCRATCH, Kiosk.skin);
+		TextButton launch = new TextButton("Launch Scratch", Kiosk.skin);
 		launch.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
@@ -53,6 +53,6 @@ public class LogicGates extends TopLevelPanel {
 			}
 		});
 		panel.add(launch);
-		initialize(Constants.LOGIC_GATES, panel);
+		initialize("Logic Gates", panel);
 	}
 }
