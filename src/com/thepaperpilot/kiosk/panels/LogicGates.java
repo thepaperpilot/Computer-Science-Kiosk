@@ -40,14 +40,17 @@ public class LogicGates extends TopLevelPanel {
 				new Dialogue() {
 					@Override
 					public void click() {
-						// TODO Update usage metrics: Start Logic Gates
 						try {
+							Gdx.graphics.setDisplayMode(0, 0, false);
+							Process p = Runtime.getRuntime().exec(Constants.SCRATCH_PATH);
+							Thread.sleep(2000);
 							Desktop.getDesktop().open(Gdx.files.absolute(Constants.LOGIC_GATES_PATH).file());
-							// Not stopping the program :/
-						} catch(IOException e) {
+							p.waitFor();
+							// cause this process to stop until process p is terminated
+							Gdx.graphics.setDisplayMode(Constants.WIDTH, Constants.HEIGHT, true);
+						} catch(IOException | InterruptedException e) {
 							e.printStackTrace();
 						}
-						// TODO Update usage metrics: End Logic Gates
 					}
 				};
 			}

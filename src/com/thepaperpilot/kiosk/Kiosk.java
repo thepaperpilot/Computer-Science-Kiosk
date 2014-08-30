@@ -26,6 +26,7 @@ public class Kiosk implements ApplicationListener {
 	private static ArrayList<TopLevelPanel> panels;
 
 	public static void main(String[] args) {
+		System.setProperty("org.lwjgl.opengl.Window.undecorated", "true");
 		LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
 		cfg.width = Constants.WIDTH;
 		cfg.height = Constants.HEIGHT;

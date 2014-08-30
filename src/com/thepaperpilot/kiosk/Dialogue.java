@@ -13,7 +13,7 @@ public class Dialogue extends Panel {
 	@Override
 	public void initialize() {
 		initialize("Opening Scratch", "Please note:\n\tThis computer does not have access to the internet.\n\tSome features in Scratch, such as 'About' will not work as expected.\n\n" +
-				"Please don't save your scratch programs as this tablet PC is refreshed regularly and your saved files will be wiped out.\n\n" +
+				"Please don't save your scratch programs as this tablet PC is refreshed regularly and your saved files will be wiped out.\n\nIf you have not used Scratch before, it is recommended you read through the pdf located on the desktop\n\n" +
 				"Tap to continue...");
 		stage.getActors().get(0).addListener(new ClickListener() {
 			@Override
